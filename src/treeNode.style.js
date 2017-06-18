@@ -13,7 +13,7 @@ const lineBlock = {
 
 const blackLineBase = {
     position: "absolute",
-    content: '',
+    content: "''",
     backgroundColor: "black",
 };
 
@@ -38,6 +38,7 @@ const lineHalfVerticalTop = {
     ...lineFullVertical,
 
     ':after': {
+        ...lineFullVertical[':after'],
         top: 0,
         height: "50%",
     },
@@ -137,6 +138,7 @@ export default {
         ...lineHalfVerticalTop,
 
         ':after': {
+            ...lineHalfVerticalTop[':after'],
             top: "auto",
             bottom: 0,
         },
@@ -155,7 +157,7 @@ export default {
 
         ':before': {
             position: "absolute",
-            content: '',
+            content: "''",
             backgroundColor: $highlightColor,
             width: $highlightLineSize,
             marginLeft: $highlightLineSize / 2,
@@ -166,7 +168,7 @@ export default {
         animationName: arrowPulse,
 
         ':after': {
-            content: '',
+            content: "''",
             position: "absolute",
             height: 0,
             marginLeft: $highlightLineSize / 2,
@@ -192,7 +194,7 @@ export default {
     highlightTopLeftCorner: {
         ':before': {
             zIndex: 3,
-            content: '',
+            content: "''",
             position: "absolute",
             borderTop: `solid ${$highlightLineSize} ${$highlightColor}`,
             borderLeft: `solid ${$highlightLineSize} ${$highlightColor}`,
@@ -216,7 +218,7 @@ export default {
         zIndex: 3,
 
         ':before': {
-            content: '',
+            content: "''",
             position: "absolute",
             borderBottom: `solid ${$highlightLineSize} ${$highlightColor}`,
             borderLeft: `solid ${$highlightLineSize} ${$highlightColor}`,
@@ -228,7 +230,7 @@ export default {
         },
 
         ':after': {
-            content: '',
+            content: "''",
             position: "absolute",
             height: 0,
             right: 0,
