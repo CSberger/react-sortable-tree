@@ -1,5 +1,5 @@
 {
-  "name": "react-sortable-tree",
+  "name": "@csberger/react-sortable-tree",
   "version": "0.1.19",
   "description": "Drag-and-drop sortable component for nested data and hierarchies",
   "scripts": {
@@ -20,12 +20,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/fritz-c/react-sortable-tree"
+    "url": "https://github.com/csberger/react-sortable-tree"
   },
   "homepage": "https://fritz-c.github.io/react-sortable-tree",
   "bugs": "https://github.com/fritz-c/react-sortable-tree/issues",
   "authors": [
-    "Chris Fritz"
+    "Chris Fritz",
+    "Christopher Berger"
   ],
   "license": "MIT",
   "dependencies": {
