@@ -415,6 +415,7 @@ class ReactSortableTree extends Component {
             maxDepth,
             scaffoldBlockPxWidth,
             searchFocusOffset,
+            scaffoldStyles,
         } = this.props;
         const TreeNodeRenderer    = this.treeNodeRenderer;
         const NodeContentRenderer = this.nodeContentRenderer;
@@ -452,6 +453,7 @@ class ReactSortableTree extends Component {
                 swapDepth={this.state.swapDepth}
                 maxDepth={maxDepth}
                 dragHover={this.dragHover}
+                scaffoldStyles={scaffoldStyles}
             >
                 <NodeContentRenderer
                     node={node}
@@ -561,6 +563,7 @@ ReactSortableTree.propTypes = {
     onVisibilityToggle: PropTypes.func,
 
     dndType: PropTypes.string,
+    scaffoldStyles: PropTypes.object,
 };
 
 ReactSortableTree.defaultProps = {
@@ -571,6 +574,7 @@ ReactSortableTree.defaultProps = {
     scaffoldBlockPxWidth: 44,
     style: {},
     innerStyle: {},
+    scaffoldStyles: {},
     searchQuery: null,
     isVirtualized: true,
     canDrag: true,
