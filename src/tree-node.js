@@ -1,6 +1,11 @@
 import React, { Component, Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import styles from './tree-node.scss';
+import {css, StyleSheet} from 'aphrodite';
+
+import TreeNodeStyle from './treeNode.style';
+
+const style = StyleSheet.create(TreeNodeStyle);
 
 class TreeNode extends Component {
     render() {
@@ -17,6 +22,7 @@ class TreeNode extends Component {
             draggedNode,
             canDrop,
             treeIndex,
+            scaffoldStyles,
             customCanDrop: _customCanDrop, // Delete from otherProps
             dragHover:     _dragHover,     // Delete from otherProps
             getNodeKey:    _getNodeKey,    // Delete from otherProps
@@ -44,6 +50,7 @@ class TreeNode extends Component {
                     // |  |  |
                     // +--+--+
                     lineClass = `${styles.lineHalfHorizontalRight} ${styles.lineHalfVerticalBottom}`;
+                    lineClass = '';
                 } else if (i === scaffoldBlockCount - 1) {
                     // Last scaffold block in the row, right before the row content
                     // +--+--+
@@ -52,6 +59,7 @@ class TreeNode extends Component {
                     // |  |  |
                     // +--+--+
                     lineClass = `${styles.lineHalfHorizontalRight} ${styles.lineFullVertical}`;
+                    lineClass = '';
                 } else {
                     // Simply connecting the line extending down to the next sibling on this level
                     // +--+--+
@@ -60,6 +68,7 @@ class TreeNode extends Component {
                     // |  |  |
                     // +--+--+
                     lineClass = styles.lineFullVertical;
+                    lineClass = '';
                 }
             } else if (listIndex === 0) {
                 // Top-left corner of the tree, but has no siblings
@@ -69,6 +78,7 @@ class TreeNode extends Component {
                 // |     |
                 // +-----+
                 lineClass = styles.lineHalfHorizontalRight;
+                lineClass = '';
             } else if (i === scaffoldBlockCount - 1) {
                 // The last or only node in this level of the tree
                 // +--+--+
@@ -77,6 +87,7 @@ class TreeNode extends Component {
                 // |     |
                 // +-----+
                 lineClass = `${styles.lineHalfVerticalTop} ${styles.lineHalfHorizontalRight}`;
+                lineClass = '';
             }
 
             scaffold.push(

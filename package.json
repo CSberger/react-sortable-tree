@@ -30,6 +30,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "aphrodite": "^1.2.1",
     "lodash.isequal": "^4.4.0",
     "prop-types": "^15.5.8",
     "react-dnd": "^2.1.4",
